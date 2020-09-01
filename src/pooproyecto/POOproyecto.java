@@ -9,7 +9,7 @@ package pooproyecto;
  *
  * @author Usuario
  */
-public class POOproyecto {
+public class POOproyecto{
 
     /**
      * @param args the command line arguments
