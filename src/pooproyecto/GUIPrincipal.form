@@ -27,119 +27,34 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jProgressBar4" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jProgressBar2" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jProgressBar3" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jProgressBar1" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jProgressBar6" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jProgressBar5" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="231" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnAtaqueNormal" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAtaqueEspecial" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rbtnHealer" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnArquero" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnMago" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnGuerrero" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="170" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jProgressBar7" min="-2" pref="109" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblGuerrero" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblHealer" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblMago" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblArquero" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="btnArquero" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnMago" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnHealer" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnGuerrero" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Component id="jProgressBar8" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="btnAtaqueNormal" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAtaqueEspecial" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="rbtnHealer" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnArquero" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnMago" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtnGuerrero" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="105" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="20" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jProgressBar1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jProgressBar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jProgressBar3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jProgressBar4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jProgressBar5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jProgressBar6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jProgressBar7" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblArquero" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnArquero" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="141" pref="141" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblGuerrero" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnGuerrero" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblMago" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnMago" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblHealer" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnHealer" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jProgressBar8" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="rbtnArquero" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="rbtnGuerrero" min="-2" max="-2" attributes="0"/>
@@ -148,7 +63,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="rbtnHealer" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="btnAtaqueNormal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAtaqueEspecial" min="-2" max="-2" attributes="0"/>
@@ -158,38 +73,18 @@
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="358" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblArquero">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Arquero"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblGuerrero">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Guerrero"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblMago">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mago"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblHealer">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Healer"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnArquero">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Arquero"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnArqueroActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="btnAtaqueNormal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ataque Normal"/>
@@ -223,30 +118,6 @@
         <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="btnCancelar.setVisible(false);"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="btnGuerrero">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Guerrero"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuerreroActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnMago">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mago"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMagoActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnHealer">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Healer"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHealerActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JRadioButton" name="rbtnGuerrero">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
@@ -279,21 +150,199 @@
         <Property name="text" type="java.lang.String" value="Healer"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar1">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar2">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar3">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar4">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar5">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar6">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar7">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar8">
-    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="221" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jProgressBar15" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar13" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar14" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar12" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar9" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar16" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar10" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="jProgressBar11" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="204" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Component id="jProgressBar12" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jProgressBar13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jProgressBar14" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jProgressBar15" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jProgressBar16" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jProgressBar9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jProgressBar10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jProgressBar11" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar9">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar10">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar11">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar12">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar13">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar14">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar15">
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="jProgressBar16">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="160" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblGuerrero" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblHealer" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMago" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblArquero" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnArquero" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMago" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnHealer" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnGuerrero" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="186" max="32767" attributes="0"/>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="btnArquero" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblArquero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="141" pref="141" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblGuerrero" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnGuerrero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblMago" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMago" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblHealer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnHealer" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btnMago">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mago"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMagoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnHealer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Healer"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHealerActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblArquero">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Arquero"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblGuerrero">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Guerrero"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblMago">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mago"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblHealer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Healer"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnArquero">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Arquero"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnArqueroActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnGuerrero">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Guerrero"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuerreroActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
