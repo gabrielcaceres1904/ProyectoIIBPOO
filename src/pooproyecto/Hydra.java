@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectoiib_poo;
+package pooproyecto;
 
 /**
  *
  * @author justi
  */
 public class Hydra extends Enemigo{
-    private int vida = 300;
+    private int vida = (int) Math.random()*(400-300+1)+300;
     
     
     @Override
     public int ataque(){
-        int dañoCausado = (int)(Math.random()*2);
+        int dañoCausado = (int)(Math.random()*(4-2+1)+2);
         return dañoCausado;
     }
     
     @Override
     public int ataqueEspecial(){
-        int dañoCausado = (int)(Math.random()*10);
+        int dañoCausado = (int)(Math.random()*(20-10+1)+10);
         return dañoCausado;
     }
     

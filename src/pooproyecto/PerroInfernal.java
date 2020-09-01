@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectoiib_poo;
+package pooproyecto;
 
 /**
  *
  * @author justi
  */
 public class PerroInfernal extends Enemigo{
-    private int vida = 200;
+    private int vida = (int) Math.random()*(300-200+1)+200;
     
-    
+
     @Override
     public int ataque(){
-        int dañoCausado = (int)(Math.random()*1);
+        int dañoCausado = (int)(Math.random()*(6-1+1)+1);
         return dañoCausado;
     }
     
     @Override
     public int ataqueEspecial(){
-        int dañoCausado = (int)(Math.random()*1)*2;
+        int dañoCausado = (int)(Math.random()*(6-1+1)+1)*2;
         return dañoCausado;
     }
     
