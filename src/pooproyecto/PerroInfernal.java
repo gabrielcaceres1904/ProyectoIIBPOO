@@ -10,9 +10,11 @@ package pooproyecto;
  * @author justi
  */
 public class PerroInfernal extends Enemigo{
-    private int vida = (int) Math.random()*(300-200+1)+200;
     
-
+    public PerroInfernal(){
+        super.vida = (int) Math.random()*(300-200+1)+200;
+    }
+    
     @Override
     public int ataque(){
         int dañoCausado = (int)(Math.random()*(6-1+1)+1);

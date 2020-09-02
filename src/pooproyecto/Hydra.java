@@ -10,8 +10,10 @@ package pooproyecto;
  * @author justi
  */
 public class Hydra extends Enemigo{
-    private int vida = (int) Math.random()*(400-300+1)+300;
     
+    public Hydra(){
+        super.vida = (int) Math.random()*(400-300+1)+300;
+    }
     
     @Override
     public int ataque(){
@@ -25,7 +27,6 @@ public class Hydra extends Enemigo{
         return dañoCausado;
     }
     
-
     public int getVida() {
         return vida;
     }
