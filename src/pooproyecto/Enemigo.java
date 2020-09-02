@@ -10,9 +10,8 @@ package pooproyecto;
  * @author justi
  */
 public abstract class Enemigo {
-    private int vida;
-    private int damage;
-    private int turnoActual;
+    public int vida;
+    public int damage;
     
     public abstract int ataque();
     

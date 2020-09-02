@@ -10,8 +10,10 @@ package pooproyecto;
  * @author justi
  */
 public class Demogorgon extends Enemigo{
-    private int vida = (int) Math.random()*(200-150+1)+150;
     
+    public Demogorgon(){
+        super.vida = (int) Math.random()*(200-150+1)+150;
+    }    
     
     @Override
     public int ataque(){
