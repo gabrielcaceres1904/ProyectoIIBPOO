@@ -7,8 +7,6 @@ package pooproyecto;
 
 import java.awt.Color;
 
-
-
 /**
  *
  * @author Usuario
@@ -32,33 +30,137 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         btnGAliados = new javax.swing.ButtonGroup();
-        btnAtaqueNormal = new javax.swing.JButton();
-        btnAtaqueEspecial = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         rbtnGuerrero = new javax.swing.JRadioButton();
         rbtnMago = new javax.swing.JRadioButton();
         rbtnArquero = new javax.swing.JRadioButton();
         rbtnHealer = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
-        jProgressBar9 = new javax.swing.JProgressBar();
-        jProgressBar10 = new javax.swing.JProgressBar();
-        jProgressBar11 = new javax.swing.JProgressBar();
-        jProgressBar12 = new javax.swing.JProgressBar();
-        jProgressBar13 = new javax.swing.JProgressBar();
-        jProgressBar14 = new javax.swing.JProgressBar();
-        jProgressBar15 = new javax.swing.JProgressBar();
-        jProgressBar16 = new javax.swing.JProgressBar();
+        pgrbarManaMago = new javax.swing.JProgressBar();
+        pgrbarHealerVida = new javax.swing.JProgressBar();
+        pgrbarManaHealer = new javax.swing.JProgressBar();
+        pgrbarVidaArquero = new javax.swing.JProgressBar();
+        pgrbarFlechasArquero = new javax.swing.JProgressBar();
+        pgrbarVidaGuerrero = new javax.swing.JProgressBar();
+        pgrbarStaminaGuerrero = new javax.swing.JProgressBar();
+        pgrbarVidaMago = new javax.swing.JProgressBar();
         jPanel2 = new javax.swing.JPanel();
-        btnMago = new javax.swing.JButton();
-        btnHealer = new javax.swing.JButton();
-        lblArquero = new javax.swing.JLabel();
-        lblGuerrero = new javax.swing.JLabel();
-        lblMago = new javax.swing.JLabel();
-        lblHealer = new javax.swing.JLabel();
         btnArquero = new javax.swing.JButton();
         btnGuerrero = new javax.swing.JButton();
+        btnMago = new javax.swing.JButton();
+        btnHealer = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        btnAtaqueNormal = new javax.swing.JButton();
+        btnAtaqueEspecial = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1000, 300));
+
+        btnGAliados.add(rbtnGuerrero);
+        rbtnGuerrero.setText("Guerrero");
+
+        btnGAliados.add(rbtnMago);
+        rbtnMago.setText("Mago");
+
+        btnGAliados.add(rbtnArquero);
+        rbtnArquero.setText("Arquero");
+
+        btnGAliados.add(rbtnHealer);
+        rbtnHealer.setText("Healer");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pgrbarStaminaGuerrero, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarFlechasArquero, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarVidaGuerrero, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarVidaArquero, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarManaMago, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarVidaMago, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarHealerVida, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pgrbarManaHealer, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(pgrbarVidaArquero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pgrbarFlechasArquero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pgrbarVidaGuerrero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pgrbarStaminaGuerrero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pgrbarVidaMago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pgrbarManaMago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pgrbarHealerVida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pgrbarManaHealer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        btnArquero.setText("Arquero");
+        btnArquero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArqueroActionPerformed(evt);
+            }
+        });
+
+        btnGuerrero.setText("Guerrero");
+        btnGuerrero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuerreroActionPerformed(evt);
+            }
+        });
+
+        btnMago.setText("Mago");
+        btnMago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMagoActionPerformed(evt);
+            }
+        });
+
+        btnHealer.setText("Healer");
+        btnHealer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHealerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMago)
+                    .addComponent(btnGuerrero)
+                    .addComponent(btnHealer)
+                    .addComponent(btnArquero))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnArquero)
+                .addGap(38, 38, 38)
+                .addComponent(btnGuerrero)
+                .addGap(40, 40, 40)
+                .addComponent(btnMago)
+                .addGap(18, 28, Short.MAX_VALUE)
+                .addComponent(btnHealer)
+                .addContainerGap())
+        );
 
         btnAtaqueNormal.setText("Ataque Normal");
         btnAtaqueNormal.addActionListener(new java.awt.event.ActionListener() {
@@ -81,196 +183,79 @@ public class GUIPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnGAliados.add(rbtnGuerrero);
-        rbtnGuerrero.setText("Guerrero");
-
-        btnGAliados.add(rbtnMago);
-        rbtnMago.setText("Mago");
-
-        btnGAliados.add(rbtnArquero);
-        rbtnArquero.setText("Arquero");
-
-        btnGAliados.add(rbtnHealer);
-        rbtnHealer.setText("Healer");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar15, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar13, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar14, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar12, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar16, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar11, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAtaqueNormal)
+                    .addComponent(btnAtaqueEspecial)
+                    .addComponent(btnCancelar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jProgressBar12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnAtaqueNormal)
                 .addGap(18, 18, 18)
-                .addComponent(jProgressBar14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAtaqueEspecial)
                 .addGap(18, 18, 18)
-                .addComponent(jProgressBar16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jProgressBar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jProgressBar11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(btnCancelar)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        btnMago.setText("Mago");
-        btnMago.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMagoActionPerformed(evt);
-            }
-        });
-
-        btnHealer.setText("Healer");
-        btnHealer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHealerActionPerformed(evt);
-            }
-        });
-
-        lblArquero.setText("Arquero");
-
-        lblGuerrero.setText("Guerrero");
-
-        lblMago.setText("Mago");
-
-        lblHealer.setText("Healer");
-
-        btnArquero.setText("Arquero");
-        btnArquero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnArqueroActionPerformed(evt);
-            }
-        });
-
-        btnGuerrero.setText("Guerrero");
-        btnGuerrero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuerreroActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblGuerrero)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblHealer)
-                                .addComponent(lblMago)
-                                .addComponent(lblArquero))
-                            .addGap(26, 26, 26)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnArquero)
-                                .addComponent(btnMago)
-                                .addComponent(btnHealer)
-                                .addComponent(btnGuerrero))))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 186, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnArquero)
-                                .addComponent(lblArquero))
-                            .addGap(141, 141, 141))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(37, 37, 37)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblGuerrero)
-                                .addComponent(btnGuerrero))
-                            .addGap(29, 29, 29)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblMago)
-                                .addComponent(btnMago))
-                            .addGap(29, 29, 29)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblHealer)
-                                .addComponent(btnHealer))))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        btnAtaqueNormal.setVisible(false);
+        btnAtaqueEspecial.setVisible(false);
+        btnCancelar.setVisible(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAtaqueNormal)
-                    .addComponent(btnCancelar)
-                    .addComponent(btnAtaqueEspecial))
-                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbtnHealer)
                     .addComponent(rbtnArquero)
                     .addComponent(rbtnMago)
                     .addComponent(rbtnGuerrero))
-                .addGap(0, 105, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(rbtnArquero)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rbtnGuerrero)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rbtnMago)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rbtnHealer))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAtaqueNormal)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAtaqueEspecial)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancelar)))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbtnArquero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(rbtnGuerrero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(rbtnMago)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(rbtnHealer))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(376, 376, 376))
         );
 
-        btnAtaqueNormal.setVisible(false);
-        btnAtaqueEspecial.setVisible(false);
-        btnCancelar.setVisible(false);
+        rbtnGuerrero.setVisible(false);
+        rbtnMago.setVisible(false);
+        rbtnArquero.setVisible(false);
+        rbtnHealer.setVisible(false);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -292,26 +277,63 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnGuerrero.setForeground(Color.BLACK);
         btnMago.setForeground(Color.BLACK);
         btnHealer.setForeground(Color.BLACK);
+        rbtnArquero.setVisible(false);
+        rbtnGuerrero.setVisible(false);
+        rbtnMago.setVisible(false);
+        rbtnHealer.setVisible(false);
         btnAtaqueNormal.setVisible(false);
         btnAtaqueEspecial.setVisible(false);
-        btnCancelar.setVisible(false);        
+        btnCancelar.setVisible(false);
+        btnGAliados.clearSelection();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void btnMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMagoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMagoActionPerformed
-
-    private void btnHealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHealerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHealerActionPerformed
+    private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
+        btnGuerrero.setForeground(Color.red);
+        btnArquero.setEnabled(false);
+        btnMago.setEnabled(false);
+        btnHealer.setEnabled(false);
+        btnAtaqueNormal.setVisible(true);
+        btnAtaqueEspecial.setText("Legado de Popeye");
+        btnAtaqueEspecial.setVisible(true);
+        btnCancelar.setVisible(true);
+    }//GEN-LAST:event_btnGuerreroActionPerformed
 
     private void btnArqueroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArqueroActionPerformed
-        // TODO add your handling code here:
+        btnArquero.setForeground(Color.red);
+        btnGuerrero.setEnabled(false);
+        btnMago.setEnabled(false);
+        btnHealer.setEnabled(false);
+        btnAtaqueNormal.setVisible(true);
+        btnAtaqueEspecial.setText("Lluvia de Flechas");
+        btnAtaqueEspecial.setVisible(true);
+        btnCancelar.setVisible(true);
     }//GEN-LAST:event_btnArqueroActionPerformed
 
-    private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGuerreroActionPerformed
+    private void btnHealerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHealerActionPerformed
+        btnHealer.setForeground(Color.red);
+        btnArquero.setEnabled(false);
+        btnGuerrero.setEnabled(false);
+        btnMago.setEnabled(false);
+        btnAtaqueNormal.setVisible(true);
+        btnAtaqueEspecial.setText("Curar");
+        rbtnArquero.setVisible(true);
+        rbtnGuerrero.setVisible(true);
+        rbtnMago.setVisible(true);
+        rbtnHealer.setVisible(true);
+        btnAtaqueEspecial.setVisible(true);
+        btnCancelar.setVisible(true);
+    }//GEN-LAST:event_btnHealerActionPerformed
+
+    private void btnMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMagoActionPerformed
+        btnMago.setForeground(Color.red);
+        btnArquero.setEnabled(false);
+        btnGuerrero.setEnabled(false);
+        btnHealer.setEnabled(false);
+        btnAtaqueNormal.setVisible(true);
+        btnAtaqueEspecial.setText("Bola de Fuego");
+        btnAtaqueEspecial.setVisible(true);
+        btnCancelar.setVisible(true);
+    }//GEN-LAST:event_btnMagoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,18 +381,15 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnMago;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JProgressBar jProgressBar10;
-    private javax.swing.JProgressBar jProgressBar11;
-    private javax.swing.JProgressBar jProgressBar12;
-    private javax.swing.JProgressBar jProgressBar13;
-    private javax.swing.JProgressBar jProgressBar14;
-    private javax.swing.JProgressBar jProgressBar15;
-    private javax.swing.JProgressBar jProgressBar16;
-    private javax.swing.JProgressBar jProgressBar9;
-    private javax.swing.JLabel lblArquero;
-    private javax.swing.JLabel lblGuerrero;
-    private javax.swing.JLabel lblHealer;
-    private javax.swing.JLabel lblMago;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JProgressBar pgrbarFlechasArquero;
+    private javax.swing.JProgressBar pgrbarHealerVida;
+    private javax.swing.JProgressBar pgrbarManaHealer;
+    private javax.swing.JProgressBar pgrbarManaMago;
+    private javax.swing.JProgressBar pgrbarStaminaGuerrero;
+    private javax.swing.JProgressBar pgrbarVidaArquero;
+    private javax.swing.JProgressBar pgrbarVidaGuerrero;
+    private javax.swing.JProgressBar pgrbarVidaMago;
     private javax.swing.JRadioButton rbtnArquero;
     private javax.swing.JRadioButton rbtnGuerrero;
     private javax.swing.JRadioButton rbtnHealer;
