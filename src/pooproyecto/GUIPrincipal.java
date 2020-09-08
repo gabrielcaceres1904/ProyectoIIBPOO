@@ -6,18 +6,36 @@
 package pooproyecto;
 
 import java.awt.Color;
-import javax.swing.UIManager;
 
 /**
  *
  * @author Usuario
  */
 public class GUIPrincipal extends javax.swing.JFrame {
-
     
+    Arquero arqueroGUI= new Arquero();
+    Guerrero guerreroGUI= new Guerrero();
+    Mago magoGUI = new Mago();
+    Healer healerGUI = new Healer();
+    Enemigo enemigoGUI;
+    int EnemigoRandom = (int) (Math.random() * 2);
+    int turno = 1;
     
     public GUIPrincipal() {
-        initComponents();    
+        switch (EnemigoRandom){
+        case 0:
+            enemigoGUI = new Hydra();
+            break;
+        case 1:
+            enemigoGUI= new Demogorgon();
+            break;
+        case 2:
+            enemigoGUI = new PerroInfernal();
+            break;
+        }
+        initComponents();
+        
+        
     }
 
     /**
@@ -30,14 +48,14 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblVidaABarra = new javax.swing.JLabel();
+        lblFlechaABarra = new javax.swing.JLabel();
+        lblVidaGBarra = new javax.swing.JLabel();
+        lblStaminaGBarra = new javax.swing.JLabel();
+        lblManaHBarra = new javax.swing.JLabel();
+        lblManaMBarra = new javax.swing.JLabel();
+        lblVidaHBarra = new javax.swing.JLabel();
+        lblVidaMBarra = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnArquero = new javax.swing.JButton();
         btnGuerrero = new javax.swing.JButton();
@@ -47,34 +65,49 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnAtaqueNormal = new javax.swing.JButton();
         btnAtaqueEspecial = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        lblVidaANum = new javax.swing.JLabel();
+        lblFlechaANum = new javax.swing.JLabel();
+        lblVidaGNum = new javax.swing.JLabel();
+        lblStaminaGNum = new javax.swing.JLabel();
+        lblVidaMNum = new javax.swing.JLabel();
+        lblManaMNum = new javax.swing.JLabel();
+        lblVidaHNum = new javax.swing.JLabel();
+        lblManaHNum = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        lblEnemigo = new javax.swing.JLabel();
+        lblVidaEBarra = new javax.swing.JLabel();
+        lblTurnoEBarra = new javax.swing.JLabel();
+        lblVidaENum = new javax.swing.JLabel();
+        lblTurnoENum = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 300));
 
-        jLabel1.setForeground(new java.awt.Color(240, 0, 0));
-        jLabel1.setText("██████████");
-        jLabel1.setToolTipText("");
+        lblVidaABarra.setForeground(new java.awt.Color(240, 0, 0));
+        lblVidaABarra.setText("██████████");
+        lblVidaABarra.setToolTipText("");
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 240));
-        jLabel2.setText("██████████");
+        lblFlechaABarra.setForeground(new java.awt.Color(192, 192, 192));
+        lblFlechaABarra.setText("██████████");
 
-        jLabel3.setForeground(new java.awt.Color(240, 0, 0));
-        jLabel3.setText("██████████");
+        lblVidaGBarra.setForeground(new java.awt.Color(240, 0, 0));
+        lblVidaGBarra.setText("██████████");
 
-        jLabel4.setForeground(new java.awt.Color(0, 0, 240));
-        jLabel4.setText("██████████");
+        lblStaminaGBarra.setForeground(new java.awt.Color(0, 240, 0));
+        lblStaminaGBarra.setText("██████████");
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 240));
-        jLabel5.setText("██████████");
+        lblManaHBarra.setForeground(new java.awt.Color(0, 0, 240));
+        lblManaHBarra.setText("██████████");
 
-        jLabel6.setForeground(new java.awt.Color(0, 0, 240));
-        jLabel6.setText("██████████");
+        lblManaMBarra.setForeground(new java.awt.Color(0, 0, 240));
+        lblManaMBarra.setText("██████████");
 
-        jLabel7.setForeground(new java.awt.Color(240, 0, 0));
-        jLabel7.setText("██████████");
+        lblVidaHBarra.setForeground(new java.awt.Color(240, 0, 0));
+        lblVidaHBarra.setText("██████████");
 
-        jLabel8.setForeground(new java.awt.Color(240, 0, 0));
-        jLabel8.setText("██████████");
+        lblVidaMBarra.setForeground(new java.awt.Color(240, 0, 0));
+        lblVidaMBarra.setText("██████████");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,35 +116,35 @@ public class GUIPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                    .addComponent(lblVidaMBarra)
+                    .addComponent(lblVidaHBarra)
+                    .addComponent(lblManaMBarra)
+                    .addComponent(lblManaHBarra)
+                    .addComponent(lblStaminaGBarra)
+                    .addComponent(lblVidaGBarra)
+                    .addComponent(lblFlechaABarra)
+                    .addComponent(lblVidaABarra))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addComponent(jLabel1)
+                .addComponent(lblVidaABarra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lblFlechaABarra)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(lblVidaGBarra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(lblStaminaGBarra)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
+                .addComponent(lblVidaMBarra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(lblManaMBarra)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel7)
+                .addComponent(lblVidaHBarra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(lblManaHBarra)
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -219,30 +252,122 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnAtaqueEspecial.setVisible(false);
         btnCancelar.setVisible(false);
 
+        lblVidaANum.setText("VidaArquero");
+
+        lblFlechaANum.setText("FlechasArquero");
+
+        lblVidaGNum.setText("VidaGuerrero");
+
+        lblStaminaGNum.setText("StaminaGuerrero");
+
+        lblVidaMNum.setText("VidaMago");
+
+        lblManaMNum.setText("ManaMago");
+
+        lblVidaHNum.setText("VidaHealer");
+
+        lblManaHNum.setText("ManaHealer");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        lblEnemigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblEnemigo.setText("Enemigo");
+
+        lblVidaEBarra.setForeground(new java.awt.Color(240, 0, 0));
+        lblVidaEBarra.setText("█████████");
+
+        lblTurnoEBarra.setForeground(new java.awt.Color(240, 240, 0));
+        lblTurnoEBarra.setText("█████████");
+        lblTurnoEBarra.setToolTipText("Turnos que quedan para que el enemigo haga su ataque especial");
+
+        lblVidaENum.setText("VidaEnemigo");
+
+        lblTurnoENum.setText("TurnoEnemigo");
+        lblTurnoENum.setToolTipText("Turnos que quedan para que el enemigo haga su ataque especial");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblVidaANum)
+                    .addComponent(lblFlechaANum)
+                    .addComponent(lblVidaGNum)
+                    .addComponent(lblStaminaGNum)
+                    .addComponent(lblVidaMNum)
+                    .addComponent(lblManaMNum)
+                    .addComponent(lblVidaHNum)
+                    .addComponent(lblManaHNum))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(476, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(lblEnemigo)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblVidaEBarra)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblVidaENum))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblTurnoEBarra)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblTurnoENum)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblVidaANum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblFlechaANum)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblVidaGNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblStaminaGNum)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblVidaMNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblManaMNum)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblVidaHNum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblManaHNum))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblVidaEBarra)
+                            .addComponent(lblVidaENum))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTurnoEBarra)
+                            .addComponent(lblTurnoENum)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(lblEnemigo)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -250,19 +375,32 @@ public class GUIPrincipal extends javax.swing.JFrame {
 
     private void btnAtaqueEspecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtaqueEspecialActionPerformed
     if (btnArquero.isEnabled()){
-        //arqueroGUI.LluviadeFlechas();
-        //monstruoGUI.dañoRecibido(arqueroGUI.getDamage());               
-    }else if (btnAtaqueEspecial.getText().equals("Legado de Popeye")){
+            
+    }else if (btnGuerrero.isEnabled()){
         
-    }else if (btnAtaqueEspecial.getText().equals("Bola de Fuego")){
+    }else if (btnMago.isEnabled()){
         
-    }else if (btnAtaqueEspecial.getText().equals("Curar")){
+    }else if (btnHealer.isEnabled()){
         
     }
     }//GEN-LAST:event_btnAtaqueEspecialActionPerformed
 
     private void btnAtaqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtaqueNormalActionPerformed
-        // TODO add your handling code here:
+    if (btnArquero.isEnabled()){
+        enemigoGUI.recibirDaño(arqueroGUI.ataque());
+        if(turno==3){
+            arqueroGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=1;
+        } else arqueroGUI.recibirDaño(enemigoGUI.ataque());
+        
+    }else if (btnGuerrero.isEnabled()){
+
+    }else if (btnMago.isEnabled()){
+        
+    }else if (btnHealer.isEnabled()){
+        
+    }
+    turno++;
     }//GEN-LAST:event_btnAtaqueNormalActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -367,16 +505,31 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnGuerrero;
     private javax.swing.JButton btnHealer;
     private javax.swing.JButton btnMago;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblEnemigo;
+    private javax.swing.JLabel lblFlechaABarra;
+    private javax.swing.JLabel lblFlechaANum;
+    private javax.swing.JLabel lblManaHBarra;
+    private javax.swing.JLabel lblManaHNum;
+    private javax.swing.JLabel lblManaMBarra;
+    private javax.swing.JLabel lblManaMNum;
+    private javax.swing.JLabel lblStaminaGBarra;
+    private javax.swing.JLabel lblStaminaGNum;
+    private javax.swing.JLabel lblTurnoEBarra;
+    private javax.swing.JLabel lblTurnoENum;
+    private javax.swing.JLabel lblVidaABarra;
+    private javax.swing.JLabel lblVidaANum;
+    private javax.swing.JLabel lblVidaEBarra;
+    private javax.swing.JLabel lblVidaENum;
+    private javax.swing.JLabel lblVidaGBarra;
+    private javax.swing.JLabel lblVidaGNum;
+    private javax.swing.JLabel lblVidaHBarra;
+    private javax.swing.JLabel lblVidaHNum;
+    private javax.swing.JLabel lblVidaMBarra;
+    private javax.swing.JLabel lblVidaMNum;
     // End of variables declaration//GEN-END:variables
 }

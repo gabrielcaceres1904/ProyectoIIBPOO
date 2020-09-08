@@ -9,7 +9,7 @@ package pooproyecto;
  *
  * @author tapia
  */
-public class Guerrero extends Heroes{
+public class Guerrero extends Heroe{
     
     public void setVida(int vida) {//30
         this.vida = vida;
@@ -20,13 +20,13 @@ public class Guerrero extends Heroes{
     }
 
     @Override
-    int atk() {
+    int ataque() {
         recurso -= 10;
         return super.damage = (int) ((Math.random()*15)+3);
     }
 
     @Override
-    int atkEsp() {
+    int ataqueEspecial() {
         recurso -= 20; 
         return super.damage = (int) ((Math.random()*30)+7);
     }

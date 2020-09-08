@@ -9,9 +9,9 @@ package pooproyecto;
  *
  * @author justi
  */
-public abstract class Enemigo {
-    public int vida;
-    public int damage;
+public abstract class Enemigo extends Personaje{
+
+    public String nombre;
     
     public abstract int ataque();
     

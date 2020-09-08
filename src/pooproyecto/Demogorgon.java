@@ -11,8 +11,10 @@ package pooproyecto;
  */
 public class Demogorgon extends Enemigo{
     
+    
     public Demogorgon(){
-        super.vida = (int) Math.random()*(200-150+1)+150;
+        super.vida = (int) (Math.random()*(200-150+1)+150);
+        super.nombre="Demogorgon";
     }    
     
     @Override
@@ -24,6 +26,7 @@ public class Demogorgon extends Enemigo{
     @Override
     public int ataqueEspecial(){
         int dañoCausado = (int)(Math.random()*(7-3+1)+3);
+        dañoCausado=dañoCausado+(int)(Math.random()*(7-3+1)+3);
         return dañoCausado;
     }
 

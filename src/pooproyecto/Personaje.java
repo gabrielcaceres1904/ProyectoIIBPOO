@@ -14,9 +14,14 @@ public abstract class Personaje {
     protected int vida;
     protected int damage;
     
-    abstract int atk();
-    abstract int atkEsp();
-    
-    
+    abstract int ataque();
+    abstract int ataqueEspecial();
+    public void recibirDaño(int daño){
+        this.vida=vida-daño;
+    }
+
+    public int getVida() {
+        return vida;
+    }
     
 }

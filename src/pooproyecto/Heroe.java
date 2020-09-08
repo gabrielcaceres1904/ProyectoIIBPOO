@@ -9,9 +9,13 @@ package pooproyecto;
  *
  * @author tapia
  */
-public abstract class Heroes extends Personaje {
+public abstract class Heroe extends Personaje {
 
     protected int recurso;
+
+    public int getRecurso() {
+        return recurso;
+    }
     
     
 }

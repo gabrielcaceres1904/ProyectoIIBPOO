@@ -12,7 +12,8 @@ package pooproyecto;
 public class Hydra extends Enemigo{
     
     public Hydra(){
-        super.vida = (int) Math.random()*(400-300+1)+300;
+        super.vida = (int) (Math.random()*(400-300+1)+300);
+        super.nombre="Hydra";
     }
     
     @Override

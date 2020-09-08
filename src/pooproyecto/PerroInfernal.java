@@ -12,7 +12,8 @@ package pooproyecto;
 public class PerroInfernal extends Enemigo{
     
     public PerroInfernal(){
-        super.vida = (int) Math.random()*(300-200+1)+200;
+        super.vida = (int) (Math.random()*(300-200+1)+200);
+        super.nombre="Perro Infernal";
     }
     
     @Override
