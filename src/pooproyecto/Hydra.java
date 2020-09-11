@@ -14,12 +14,13 @@ public class Hydra extends Enemigo{
     public Hydra(){
         super.vida = (int) (Math.random()*(400-300+1)+300);
         super.nombre="Hydra";
+        this.vidaMaxima=this.vida;
     }
     
     @Override
     public int ataque(){
-        int dañoCausado = (int)(Math.random()*(4-2+1)+2);
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(4-2+1)+2);
+        return this.damage;
     }
     
     @Override

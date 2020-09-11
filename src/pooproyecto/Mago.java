@@ -11,13 +11,13 @@ package pooproyecto;
  */
 public class Mago extends Heroe {
     
-    public void setVida(int vida) {//15
-        this.vida = vida;
+    public Mago(){
+        this.vida=15;
+        this.recurso=100;
+        this.vidaMaxima=this.vida;
+        this.recursoMaximo=this.recurso;
     }
-   
-    public void setRecurso(int recurso) { //Mana -> 100
-        this.recurso = recurso;
-    }
+
 
     @Override
     int ataque() {

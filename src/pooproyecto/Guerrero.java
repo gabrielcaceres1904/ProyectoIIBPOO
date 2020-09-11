@@ -11,13 +11,13 @@ package pooproyecto;
  */
 public class Guerrero extends Heroe{
     
-    public void setVida(int vida) {//30
-        this.vida = vida;
+    public Guerrero(){
+        this.vida=30;
+        this.recurso=100;
+        this.vidaMaxima=this.vida;
+        this.recursoMaximo=this.recurso;
     }
-   
-    public void setRecurso(int recurso) { //estamina -> 100
-        this.recurso = recurso;
-    }
+    
 
     @Override
     int ataque() {

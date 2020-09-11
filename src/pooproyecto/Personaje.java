@@ -13,6 +13,7 @@ public abstract class Personaje {
     
     protected int vida;
     protected int damage;
+    protected int vidaMaxima;
     
     abstract int ataque();
     abstract int ataqueEspecial();
@@ -22,6 +23,14 @@ public abstract class Personaje {
 
     public int getVida() {
         return vida;
+    }
+
+    public int getVidaMaxima() {
+        return vidaMaxima;
+    }
+
+    public int getDamage() {
+        return damage;
     }
     
 }

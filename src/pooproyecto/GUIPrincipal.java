@@ -6,6 +6,7 @@
 package pooproyecto;
 
 import java.awt.Color;
+import javax.swing.JLabel;
 
 /**
  *
@@ -21,6 +22,77 @@ public class GUIPrincipal extends javax.swing.JFrame {
     int EnemigoRandom = (int) (Math.random() * 2);
     int turno = 1;
     
+    public void actualizarBarras(JLabel barra, int valorActual, int valorMaximo){
+        if(valorActual<=0){
+            barra.setText("~~~~~~~~~~");
+        }else if (valorActual<0.1*valorMaximo){
+            barra.setText("█~~~~~~~~~");
+        } else if (valorActual<0.2*valorMaximo){
+            barra.setText("██~~~~~~~~");
+        } else if (valorActual<0.3*valorMaximo){
+            barra.setText("███~~~~~~~");
+        } else if (valorActual<0.4*valorMaximo){
+            barra.setText("████~~~~~~");
+        } else if (valorActual<0.5*valorMaximo){
+            barra.setText("█████~~~~~");
+        } else if (valorActual<0.6*valorMaximo){
+            barra.setText("██████~~~~");
+        } else if (valorActual<0.7*valorMaximo){
+            barra.setText("███████~~~");
+        } else if (valorActual<0.8*valorMaximo){
+            barra.setText("████████~~");
+        } else if (valorActual<0.9*valorMaximo){
+            barra.setText("█████████~");
+        }  else if (valorActual>=0.9*valorMaximo){
+            barra.setText("██████████");
+        }    
+    }
+    
+    public void actualizarNumeros(JLabel numero, int valorActual, int valorMaximo){
+        if(valorActual<0){
+            numero.setText("0/"+String.valueOf(valorMaximo));
+        } else numero.setText(String.valueOf(valorActual)+"/"+String.valueOf(valorMaximo));
+    }
+    
+    public void actualizarTodo(){ 
+        actualizarNumeros(lblVidaANum,arqueroGUI.getVida(),arqueroGUI.getVidaMaxima());
+        actualizarNumeros(lblFlechaANum,arqueroGUI.getRecurso(),arqueroGUI.getRecursoMaximo());
+        actualizarNumeros(lblVidaGNum,guerreroGUI.getVida(),guerreroGUI.getVidaMaxima());
+        actualizarNumeros(lblStaminaGNum,guerreroGUI.getRecurso(),guerreroGUI.getRecursoMaximo());
+        actualizarNumeros(lblVidaMNum,magoGUI.getVida(),magoGUI.getVidaMaxima());
+        actualizarNumeros(lblManaMNum,magoGUI.getRecurso(),magoGUI.getRecursoMaximo());
+        actualizarNumeros(lblVidaHNum,healerGUI.getVida(),healerGUI.getVidaMaxima());
+        actualizarNumeros(lblManaHNum,healerGUI.getRecurso(),healerGUI.getRecursoMaximo());
+        actualizarNumeros(lblVidaENum,enemigoGUI.getVida(),enemigoGUI.getVidaMaxima());
+        actualizarNumeros(lblTurnoENum,turno,3);
+        
+        actualizarBarras(lblVidaABarra,arqueroGUI.getVida(),arqueroGUI.getVidaMaxima());
+        actualizarBarras(lblFlechaABarra,arqueroGUI.getRecurso(),arqueroGUI.getRecursoMaximo());
+        actualizarBarras(lblVidaGBarra,guerreroGUI.getVida(),guerreroGUI.getVidaMaxima());
+        actualizarBarras(lblStaminaGBarra,guerreroGUI.getRecurso(),guerreroGUI.getRecursoMaximo());
+        actualizarBarras(lblVidaMBarra,magoGUI.getVida(),magoGUI.getVidaMaxima());
+        actualizarBarras(lblManaMBarra,magoGUI.getRecurso(),magoGUI.getRecursoMaximo());
+        actualizarBarras(lblVidaHBarra,healerGUI.getVida(),healerGUI.getVidaMaxima());
+        actualizarBarras(lblManaHBarra,healerGUI.getRecurso(),healerGUI.getRecursoMaximo());
+        actualizarBarras(lblVidaEBarra,enemigoGUI.getVida(),enemigoGUI.getVidaMaxima());
+        actualizarBarras(lblTurnoEBarra,turno,3);        
+    }
+    
+    public void terminarTurno(){
+                
+        btnArquero.setEnabled(true);
+        btnGuerrero.setEnabled(true);
+        btnMago.setEnabled(true);
+        btnHealer.setEnabled(true);
+        btnArquero.setForeground(Color.BLACK);
+        btnGuerrero.setForeground(Color.BLACK);
+        btnMago.setForeground(Color.BLACK);
+        btnHealer.setForeground(Color.BLACK);
+        btnAtaqueNormal.setVisible(false);
+        btnAtaqueEspecial.setVisible(false);
+        btnCancelar.setVisible(false);
+    }
+    
     public GUIPrincipal() {
         switch (EnemigoRandom){
         case 0:
@@ -34,8 +106,8 @@ public class GUIPrincipal extends javax.swing.JFrame {
             break;
         }
         initComponents();
-        
-        
+        actualizarTodo();
+        lblEnemigo.setText(enemigoGUI.getNombre());
     }
 
     /**
@@ -74,7 +146,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
         lblVidaHNum = new javax.swing.JLabel();
         lblManaHNum = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtResumenTurno = new javax.swing.JTextArea();
         lblEnemigo = new javax.swing.JLabel();
         lblVidaEBarra = new javax.swing.JLabel();
         lblTurnoEBarra = new javax.swing.JLabel();
@@ -268,9 +340,10 @@ public class GUIPrincipal extends javax.swing.JFrame {
 
         lblManaHNum.setText("ManaHealer");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtResumenTurno.setEditable(false);
+        txtResumenTurno.setColumns(20);
+        txtResumenTurno.setRows(5);
+        jScrollPane1.setViewportView(txtResumenTurno);
 
         lblEnemigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblEnemigo.setText("Enemigo");
@@ -375,14 +448,44 @@ public class GUIPrincipal extends javax.swing.JFrame {
 
     private void btnAtaqueEspecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtaqueEspecialActionPerformed
     if (btnArquero.isEnabled()){
-            
+        enemigoGUI.recibirDaño(arqueroGUI.ataqueEspecial());
+        if(turno==3){
+            arqueroGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {arqueroGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Arquero hace Lluvia de Flechas\n causando "+arqueroGUI.getDamage()+
+            " de daño \ny recibe "+enemigoGUI.getDamage()+" de daño");    
     }else if (btnGuerrero.isEnabled()){
-        
+        enemigoGUI.recibirDaño(guerreroGUI.ataqueEspecial());
+        if(turno==3){
+            guerreroGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {guerreroGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Guerrero hace Legado de Popeye\n causando "+guerreroGUI.getDamage()+
+            " de daño \ny recibe "+enemigoGUI.getDamage()+" de daño"); 
     }else if (btnMago.isEnabled()){
-        
+        enemigoGUI.recibirDaño(magoGUI.ataqueEspecial());
+        if(turno==3){
+            magoGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {magoGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Mago hace Bola de Fuego\n causando "+magoGUI.getDamage()+
+            " de daño \ny recibe "+enemigoGUI.getDamage()+" de daño"); 
     }else if (btnHealer.isEnabled()){
-        
+        healerGUI.recibirDaño(-(healerGUI.ataqueEspecial()));
+        magoGUI.recibirDaño(-(healerGUI.ataqueEspecial()));
+        guerreroGUI.recibirDaño(-(healerGUI.ataqueEspecial()));
+        arqueroGUI.recibirDaño(-(healerGUI.ataqueEspecial()));
+        if(turno==3){
+            healerGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {healerGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Healer cura a todos lo Aliados\n "+healerGUI.getDamage()+
+            " de vida y \nrecibe "+enemigoGUI.getDamage()+" de daño");
     }
+    turno++;
+    terminarTurno();
+    actualizarTodo();
     }//GEN-LAST:event_btnAtaqueEspecialActionPerformed
 
     private void btnAtaqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtaqueNormalActionPerformed
@@ -390,31 +493,42 @@ public class GUIPrincipal extends javax.swing.JFrame {
         enemigoGUI.recibirDaño(arqueroGUI.ataque());
         if(turno==3){
             arqueroGUI.recibirDaño(enemigoGUI.ataqueEspecial());
-            turno=1;
-        } else arqueroGUI.recibirDaño(enemigoGUI.ataque());
-        
+            turno=0;
+        } else {arqueroGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Arquero hace un ataque normal \ncausando "+arqueroGUI.getDamage()+
+            " de daño y \nrecibe "+enemigoGUI.getDamage()+" de daño"); 
     }else if (btnGuerrero.isEnabled()){
-
+        enemigoGUI.recibirDaño(guerreroGUI.ataque());
+        if(turno==3){
+            guerreroGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {guerreroGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Guerrero hace un ataque normal \ncausando "+guerreroGUI.getDamage()+
+            " de daño y \nrecibe "+enemigoGUI.getDamage()+" de daño"); 
     }else if (btnMago.isEnabled()){
-        
+        enemigoGUI.recibirDaño(magoGUI.ataque());
+        if(turno==3){
+            magoGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {magoGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Mago hace un ataque normal \ncausando "+magoGUI.getDamage()+
+            " de daño y \nrecibe "+enemigoGUI.getDamage()+" de daño"); 
     }else if (btnHealer.isEnabled()){
-        
+        enemigoGUI.recibirDaño(healerGUI.ataque());
+        if(turno==3){
+            healerGUI.recibirDaño(enemigoGUI.ataqueEspecial());
+            turno=0;
+        } else {healerGUI.recibirDaño(enemigoGUI.ataque());}
+    txtResumenTurno.setText("El Healer hace un ataque normal \ncausando "+healerGUI.getDamage()+
+            " de daño y \nrecibe "+enemigoGUI.getDamage()+" de daño"); 
     }
     turno++;
+    terminarTurno();
+    actualizarTodo();
     }//GEN-LAST:event_btnAtaqueNormalActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        btnArquero.setEnabled(true);
-        btnGuerrero.setEnabled(true);
-        btnMago.setEnabled(true);
-        btnHealer.setEnabled(true);
-        btnArquero.setForeground(Color.BLACK);
-        btnGuerrero.setForeground(Color.BLACK);
-        btnMago.setForeground(Color.BLACK);
-        btnHealer.setForeground(Color.BLACK);
-        btnAtaqueNormal.setVisible(false);
-        btnAtaqueEspecial.setVisible(false);
-        btnCancelar.setVisible(false);
+        terminarTurno();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuerreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuerreroActionPerformed
@@ -446,7 +560,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnGuerrero.setEnabled(false);
         btnMago.setEnabled(false);
         btnAtaqueNormal.setVisible(true);
-        btnAtaqueEspecial.setText("Curar");
+        btnAtaqueEspecial.setText("Curar Aliados");
         btnAtaqueEspecial.setVisible(true);
         btnCancelar.setVisible(true);
     }//GEN-LAST:event_btnHealerActionPerformed
@@ -509,7 +623,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblEnemigo;
     private javax.swing.JLabel lblFlechaABarra;
     private javax.swing.JLabel lblFlechaANum;
@@ -531,5 +644,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblVidaHNum;
     private javax.swing.JLabel lblVidaMBarra;
     private javax.swing.JLabel lblVidaMNum;
+    private javax.swing.JTextArea txtResumenTurno;
     // End of variables declaration//GEN-END:variables
 }

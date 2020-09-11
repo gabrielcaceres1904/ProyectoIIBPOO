@@ -10,14 +10,14 @@ package pooproyecto;
  * @author tapia
  */
 public class Arquero extends Heroe {
-
-    public void setVida(int vida) {//20
-        this.vida = vida;
+    
+    public Arquero(){
+        this.vida=20;
+        this.recurso=50;
+        this.vidaMaxima=this.vida;
+        this.recursoMaximo=this.recurso;
     }
-   
-    public void setRecurso(int recurso) { //Flechas -> 50
-        this.recurso = recurso;
-    }
+    
 
     @Override
     int ataque() {

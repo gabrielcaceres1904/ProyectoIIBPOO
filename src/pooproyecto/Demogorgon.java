@@ -13,21 +13,22 @@ public class Demogorgon extends Enemigo{
     
     
     public Demogorgon(){
-        super.vida = (int) (Math.random()*(200-150+1)+150);
-        super.nombre="Demogorgon";
+        this.vida = (int) (Math.random()*(200-150+1)+150);
+        this.nombre="Demogorgon";
+        this.vidaMaxima=this.vida;
     }    
     
     @Override
     public int ataque(){
-        int dañoCausado = (int)(Math.random()*(7-3+1)+3);
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(7-3+1)+3);
+        return damage;
     }
     
     @Override
     public int ataqueEspecial(){
-        int dañoCausado = (int)(Math.random()*(7-3+1)+3);
-        dañoCausado=dañoCausado+(int)(Math.random()*(7-3+1)+3);
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(7-3+1)+3);
+        this.damage=this.damage+(int)(Math.random()*(7-3+1)+3);
+        return this.damage;
     }
 
     public int getVida() {

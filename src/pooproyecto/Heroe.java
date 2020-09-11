@@ -11,10 +11,23 @@ package pooproyecto;
  */
 public abstract class Heroe extends Personaje {
 
+    public void setRecurso(int recurso) {
+        this.recurso = recurso;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
     protected int recurso;
+    protected int recursoMaximo;
 
     public int getRecurso() {
         return recurso;
+    }
+
+    public int getRecursoMaximo() {
+        return recursoMaximo;
     }
     
     

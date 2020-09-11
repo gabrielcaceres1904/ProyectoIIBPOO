@@ -11,13 +11,13 @@ package pooproyecto;
  */
 public class Healer extends Heroe {
     
-    public void setVida(int vida) {//25
-        this.vida = vida;
+    public Healer(){
+        this.vida=25;
+        this.recurso=60;
+        this.vidaMaxima=this.vida;
+        this.recursoMaximo=this.recurso;
     }
-   
-    public void setRecurso(int recurso) { //Mana -> 50
-        this.recurso = recurso;
-    }
+
 
     @Override
     int ataque() {
@@ -26,7 +26,7 @@ public class Healer extends Heroe {
 
     @Override
     int ataqueEspecial() {
-        recurso -= 10;
+        recurso -= 5;
         return super.damage = 10;
     }
     
