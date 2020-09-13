@@ -19,7 +19,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
     Mago magoGUI = new Mago();
     Healer healerGUI = new Healer();
     Enemigo enemigoGUI;
-    int EnemigoRandom = (int) (Math.random() * 2);
+    int EnemigoRandom = (int) (Math.random() * 3);
     int turno = 1;
     
     public void actualizarBarras(JLabel barra, int valorActual, int valorMaximo){
