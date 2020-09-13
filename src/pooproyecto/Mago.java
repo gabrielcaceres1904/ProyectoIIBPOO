@@ -20,12 +20,12 @@ public class Mago extends Heroe {
 
 
     @Override
-    int ataque() {
+    public int ataque() {
         return super.damage = (int) ((Math.random()*15)+1);
     }
 
     @Override
-    int ataqueEspecial() {
+    public int ataqueEspecial() {
         recurso -= 10;
         return super.damage = (int) ((Math.random()*30)+5);
     }

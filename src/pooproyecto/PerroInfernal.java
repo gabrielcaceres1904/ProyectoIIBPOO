@@ -28,9 +28,5 @@ public class PerroInfernal extends Enemigo{
         int dañoCausado = (int)(Math.random()*(6-1+1)+1)*2;
         return dañoCausado;
     }
-    
 
-    public int getVida() {
-        return vida;
-    }
 }

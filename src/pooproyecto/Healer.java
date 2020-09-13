@@ -20,12 +20,12 @@ public class Healer extends Heroe {
 
 
     @Override
-    int ataque() {
+    public int ataque() {
         return super.damage = (int) ((Math.random()*5)+1);
     }
 
     @Override
-    int ataqueEspecial() {
+    public int ataqueEspecial() {
         recurso -= 5;
         return super.damage = 10;
     }

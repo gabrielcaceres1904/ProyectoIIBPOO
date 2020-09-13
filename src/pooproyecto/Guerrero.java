@@ -20,13 +20,13 @@ public class Guerrero extends Heroe{
     
 
     @Override
-    int ataque() {
+    public int ataque() {
         recurso -= 10;
         return super.damage = (int) ((Math.random()*15)+3);
     }
 
     @Override
-    int ataqueEspecial() {
+    public int ataqueEspecial() {
         recurso -= 20; 
         return super.damage = (int) ((Math.random()*30)+7);
     }

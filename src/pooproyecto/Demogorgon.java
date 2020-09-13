@@ -30,9 +30,5 @@ public class Demogorgon extends Enemigo{
         this.damage=this.damage+(int)(Math.random()*(7-3+1)+3);
         return this.damage;
     }
-
-    public int getVida() {
-        return vida;
-    }
      
 }
