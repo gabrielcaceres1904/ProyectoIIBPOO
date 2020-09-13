@@ -25,7 +25,6 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         GUIPrincipal wD = new GUIPrincipal();
         boolean winaux = wD.win;
         boolean defaux = wD.def;
-        System.out.println(winaux +"----"+defaux);
         if(winaux){
             lblTituloVD.setText("V I C T O R I A");
             lblVD.setIcon(setIconoL("/imagenes/vic1.gif", lblVD));
