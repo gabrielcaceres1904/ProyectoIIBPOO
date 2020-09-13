@@ -83,9 +83,8 @@ public class GUIPrincipal extends javax.swing.JFrame {
 
         if (enemigoGUI.getVida() <= 0) {
             //txtResumenTurno.setText("¡VICTORIA!");
-            def=false;
+            def = false;
             win = true;
-            System.out.println(win);
             VictoriaDerrota mostrar = new VictoriaDerrota();
             mostrar.setVisible(true);
             this.dispose();
@@ -94,7 +93,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
             //txtResumenTurno.setText("¡DERROTA!");
             win = false;
             def = true;
-            System.out.println(def);
             VictoriaDerrota mostrar = new VictoriaDerrota();
             mostrar.setVisible(true);
             this.dispose();
