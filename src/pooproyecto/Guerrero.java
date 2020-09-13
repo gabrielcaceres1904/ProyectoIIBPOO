@@ -12,8 +12,8 @@ package pooproyecto;
 public class Guerrero extends Heroe{
     
     public Guerrero(){
-        this.vida=30;
-        this.recurso=100;
+        this.vida=40;
+        this.recurso=50;
         this.vidaMaxima=this.vida;
         this.recursoMaximo=this.recurso;
     }

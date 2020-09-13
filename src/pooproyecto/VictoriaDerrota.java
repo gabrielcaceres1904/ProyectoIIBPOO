@@ -48,7 +48,7 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         lblTituloVD = new javax.swing.JLabel();
         lblVD = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnJugarOtraVez = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,13 +60,13 @@ public class VictoriaDerrota extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproducir.png"))); // NOI18N
-        jButton2.setText("JUGAR OTRA VEZ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnJugarOtraVez.setBackground(new java.awt.Color(255, 255, 255));
+        btnJugarOtraVez.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
+        btnJugarOtraVez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproducir.png"))); // NOI18N
+        btnJugarOtraVez.setText("JUGAR OTRA VEZ");
+        btnJugarOtraVez.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnJugarOtraVezActionPerformed(evt);
             }
         });
 
@@ -76,7 +76,7 @@ public class VictoriaDerrota extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
-                .addComponent(jButton2)
+                .addComponent(btnJugarOtraVez)
                 .addGap(49, 49, 49)
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(75, Short.MAX_VALUE))
@@ -99,7 +99,7 @@ public class VictoriaDerrota extends javax.swing.JFrame {
                 .addComponent(lblVD, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
+                    .addComponent(btnJugarOtraVez)
                     .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52))
         );
@@ -112,13 +112,13 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnJugarOtraVezActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarOtraVezActionPerformed
         // TODO add your handling code here:
         Login jugarOV = new Login();
         jugarOV.setVisible(true);
         this.dispose();
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnJugarOtraVezActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,7 +180,7 @@ public class VictoriaDerrota extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnJugarOtraVez;
     private javax.swing.JLabel lblTituloVD;
     private javax.swing.JLabel lblVD;
     // End of variables declaration//GEN-END:variables

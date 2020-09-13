@@ -12,8 +12,8 @@ package pooproyecto;
 public class Healer extends Heroe {
     
     public Healer(){
-        this.vida=25;
-        this.recurso=60;
+        this.vida=15;
+        this.recurso=30;
         this.vidaMaxima=this.vida;
         this.recursoMaximo=this.recurso;
     }
