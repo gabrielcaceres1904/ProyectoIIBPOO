@@ -12,7 +12,7 @@ package pooproyecto;
 public class Mago extends Heroe {
     
     public Mago(){
-        this.vida=20;
+        this.vida=30;
         this.recurso=40;
         this.vidaMaxima=this.vida;
         this.recursoMaximo=this.recurso;
