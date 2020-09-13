@@ -25,11 +25,11 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         GUIPrincipal wD = new GUIPrincipal();
         boolean winaux = wD.win;
         boolean defaux = wD.def;
+        System.out.println(winaux +"----"+defaux);
         if(winaux){
             lblTituloVD.setText("V I C T O R I A");
             lblVD.setIcon(setIconoL("/imagenes/vic1.gif", lblVD));
-        }
-        if(defaux){
+        }else if(defaux){
             lblTituloVD.setText("D E R R O T A");
             lblVD.setIcon(setIconoL("/imagenes/derr.gif", lblVD));
         }
@@ -117,6 +117,7 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         Login jugarOV = new Login();
         jugarOV.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
