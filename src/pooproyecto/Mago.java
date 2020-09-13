@@ -17,8 +17,7 @@ public class Mago extends Heroe {
         this.vidaMaxima=this.vida;
         this.recursoMaximo=this.recurso;
     }
-
-
+    
     @Override
     public int ataque() {
         return super.damage = (int) ((Math.random()*15)+1);
