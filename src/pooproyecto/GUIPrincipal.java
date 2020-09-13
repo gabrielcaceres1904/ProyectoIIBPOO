@@ -21,8 +21,8 @@ public class GUIPrincipal extends javax.swing.JFrame {
     Enemigo enemigoGUI;
     int EnemigoRandom = (int) (Math.random() * 3);
     int turno = 1;
-    static boolean win=false;
-    static boolean def=false;
+    static boolean win;
+    static boolean def;
 
     public void actualizarBarras(JLabel barra, int valorActual, int valorMaximo) {
         if (valorActual <= 0) {
@@ -83,6 +83,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
 
         if (enemigoGUI.getVida() <= 0) {
             //txtResumenTurno.setText("¡VICTORIA!");
+            def=false;
             win = true;
             VictoriaDerrota mostrar = new VictoriaDerrota();
             mostrar.setVisible(true);
@@ -90,6 +91,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
         } else if (!btnArquero.isEnabled() && !btnGuerrero.isEnabled()
                 && !btnMago.isEnabled() && !btnHealer.isEnabled()) {
             //txtResumenTurno.setText("¡DERROTA!");
+            win = false;
             def = true;
             VictoriaDerrota mostrar = new VictoriaDerrota();
             mostrar.setVisible(true);

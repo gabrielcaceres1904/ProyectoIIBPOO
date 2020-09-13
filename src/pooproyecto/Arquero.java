@@ -12,8 +12,8 @@ package pooproyecto;
 public class Arquero extends Heroe {
     
     public Arquero(){
-        this.vida=20;
-        this.recurso=50;
+        this.vida=30;
+        this.recurso=30;
         this.vidaMaxima=this.vida;
         this.recursoMaximo=this.recurso;
     }
