@@ -29,7 +29,4 @@ public class Hydra extends Enemigo{
         return dañoCausado;
     }
     
-    public int getVida() {
-        return vida;
-    }
 }

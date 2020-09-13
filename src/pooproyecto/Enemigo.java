@@ -12,10 +12,6 @@ package pooproyecto;
 public abstract class Enemigo extends Personaje{
 
     protected String nombre;
-    
-    protected abstract int ataque();
-    
-    protected abstract int ataqueEspecial();
 
     public String getNombre() {
         return nombre;

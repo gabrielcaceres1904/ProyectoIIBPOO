@@ -19,7 +19,7 @@ public class GUIPrincipal extends javax.swing.JFrame {
     Mago magoGUI = new Mago();
     Healer healerGUI = new Healer();
     Enemigo enemigoGUI;
-    int EnemigoRandom = 2;//(int) (Math.random() *3 +0);
+    int EnemigoRandom = (int) (Math.random() * 3);
     int turno = 1;
     static boolean win = false;
     static boolean def = false;
