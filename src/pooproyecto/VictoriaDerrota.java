@@ -18,19 +18,23 @@ public class VictoriaDerrota extends javax.swing.JFrame {
     /**
      * Creates new form Victoria
      */
+    Login nuser = new Login();
     public VictoriaDerrota() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.WHITE);
+        lblUser.setText(nuser.user);
         GUIPrincipal wD = new GUIPrincipal();
         boolean winaux = wD.win;
         boolean defaux = wD.def;
         if(winaux){
             lblTituloVD.setText("V I C T O R I A");
             lblVD.setIcon(setIconoL("/imagenes/vic1.gif", lblVD));
+            lblFrase.setText("Felicidades!");
         }else if(defaux){
             lblTituloVD.setText("D E R R O T A");
             lblVD.setIcon(setIconoL("/imagenes/derr.gif", lblVD));
+            lblFrase.setText("Mala suerte!");
         }
         btnExit.setIcon(setIconoB("/imagenes/exit3.gif", btnExit));
     }
@@ -48,10 +52,14 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         lblVD = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
         btnJugarOtraVez = new javax.swing.JButton();
+        lblUser = new javax.swing.JLabel();
+        lblFrase = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblTituloVD.setFont(new java.awt.Font("Times New Roman", 1, 50)); // NOI18N
+        lblTituloVD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,34 +77,46 @@ public class VictoriaDerrota extends javax.swing.JFrame {
             }
         });
 
+        lblUser.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        lblUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        lblFrase.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblFrase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTituloVD, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(btnJugarOtraVez)
                 .addGap(49, 49, 49)
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblTituloVD, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(105, 105, 105))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblVD, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(162, 162, 162))))
+                .addContainerGap(50, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(146, 146, 146)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblVD, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .addComponent(lblFrase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(lblTituloVD, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(lblVD, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
+                .addComponent(lblVD, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblFrase, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnJugarOtraVez)
                     .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -116,7 +136,6 @@ public class VictoriaDerrota extends javax.swing.JFrame {
         Login jugarOV = new Login();
         jugarOV.setVisible(true);
         this.dispose();
-        
     }//GEN-LAST:event_btnJugarOtraVezActionPerformed
 
     /**
@@ -180,7 +199,9 @@ public class VictoriaDerrota extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnJugarOtraVez;
+    private javax.swing.JLabel lblFrase;
     private javax.swing.JLabel lblTituloVD;
+    private javax.swing.JLabel lblUser;
     private javax.swing.JLabel lblVD;
     // End of variables declaration//GEN-END:variables
 }
