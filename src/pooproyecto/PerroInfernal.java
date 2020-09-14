@@ -19,14 +19,14 @@ public class PerroInfernal extends Enemigo{
     
     @Override
     public int ataque(){
-        int dañoCausado = (int)(Math.random()*(6-1+1)+1);
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(6-1+1)+1);
+        return this.damage;
     }
     
     @Override
     public int ataqueEspecial(){
-        int dañoCausado = (int)(Math.random()*(6-1+1)+1)*2;
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(6-1+1)+1)*2;
+        return this.damage;
     }
 
 }

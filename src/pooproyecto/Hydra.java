@@ -25,8 +25,8 @@ public class Hydra extends Enemigo{
     
     @Override
     public int ataqueEspecial(){
-        int dañoCausado = (int)(Math.random()*(20-10+1)+10);
-        return dañoCausado;
+        this.damage = (int)(Math.random()*(20-10+1)+10);
+        return this.damage;
     }
     
 }
