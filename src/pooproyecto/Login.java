@@ -62,7 +62,7 @@ public class Login extends javax.swing.JFrame {
         txtNombreUser.setForeground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Garamond", 3, 24)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Garamond", 3, 22)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/espada (1).png"))); // NOI18N
         jButton1.setText("Comenzar");
