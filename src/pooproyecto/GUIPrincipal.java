@@ -225,7 +225,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1148, 810));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -293,8 +292,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
                 .addGap(53, 53, 53))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 113, 620));
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         btnArquero.setText("Arquero");
@@ -355,8 +352,6 @@ public class GUIPrincipal extends javax.swing.JFrame {
                 .addGap(58, 58, 58))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, 620));
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         btnAtaqueNormal.setText("Ataque Normal");
@@ -408,82 +403,174 @@ public class GUIPrincipal extends javax.swing.JFrame {
         btnAtaqueEspecial.setVisible(false);
         btnCancelar.setVisible(false);
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 190, -1));
-
         lblVidaANum.setBackground(new java.awt.Color(255, 255, 255));
         lblVidaANum.setText("VidaArquero");
-        getContentPane().add(lblVidaANum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
         lblFlechaANum.setText("FlechasArquero");
-        getContentPane().add(lblFlechaANum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
 
         lblVidaGNum.setText("VidaGuerrero");
-        getContentPane().add(lblVidaGNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, -1));
 
         lblStaminaGNum.setText("StaminaGuerrero");
-        getContentPane().add(lblStaminaGNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         lblVidaMNum.setText("VidaMago");
-        getContentPane().add(lblVidaMNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, -1, -1));
 
         lblManaMNum.setText("ManaMago");
-        getContentPane().add(lblManaMNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, -1, -1));
 
         lblVidaHNum.setText("VidaHealer");
-        getContentPane().add(lblVidaHNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, -1));
 
         lblManaHNum.setText("ManaHealer");
-        getContentPane().add(lblManaHNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, -1, -1));
 
         txtResumenTurno.setEditable(false);
         txtResumenTurno.setColumns(20);
         txtResumenTurno.setRows(5);
         jScrollPane1.setViewportView(txtResumenTurno);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 610, 377, 100));
-
         lblEnemigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblEnemigo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEnemigo.setText("Enemigo");
-        getContentPane().add(lblEnemigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 240, -1));
 
         lblVidaEBarra.setForeground(new java.awt.Color(240, 0, 0));
         lblVidaEBarra.setText("█████████");
-        getContentPane().add(lblVidaEBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 460, -1, -1));
 
         lblTurnoEBarra.setForeground(new java.awt.Color(240, 240, 0));
         lblTurnoEBarra.setText("█████████");
         lblTurnoEBarra.setToolTipText("Turnos que quedan para que el enemigo haga su ataque especial");
-        getContentPane().add(lblTurnoEBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, -1, -1));
 
         lblIcoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/control-de-juego (1).png"))); // NOI18N
-        getContentPane().add(lblIcoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 11, 35, -1));
 
         lblUser.setFont(new java.awt.Font("Trebuchet MS", 2, 21)); // NOI18N
-        getContentPane().add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 11, 172, 32));
-        getContentPane().add(lblenemigoIco, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, 240, 190));
 
         lblTurnoENum.setBackground(new java.awt.Color(255, 255, 255));
         lblTurnoENum.setText("TurnoEnemigo");
         lblTurnoENum.setToolTipText("Turnos que quedan para que el enemigo haga su ataque especial");
-        getContentPane().add(lblTurnoENum, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 490, -1, -1));
 
         lblVidaENum.setBackground(new java.awt.Color(255, 255, 255));
         lblVidaENum.setText("VidaEnemigo");
-        getContentPane().add(lblVidaENum, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 460, -1, -1));
 
         lblHeaI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblHeaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 100, 130));
 
         lblArqI.setBackground(new java.awt.Color(255, 255, 255));
         lblArqI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblArqI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 100, 130));
 
         lblGueI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblGueI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 100, 130));
 
         lblMagI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblMagI, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 100, 130));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lblIcoUser, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblArqI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblGueI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMagI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHeaI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblVidaANum)
+                    .addComponent(lblFlechaANum)
+                    .addComponent(lblStaminaGNum)
+                    .addComponent(lblManaMNum)
+                    .addComponent(lblVidaHNum)
+                    .addComponent(lblManaHNum)
+                    .addComponent(lblVidaMNum)
+                    .addComponent(lblVidaGNum)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(77, 77, 77)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(270, 270, 270)
+                        .addComponent(lblEnemigo, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblenemigoIco, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblVidaEBarra)
+                                        .addGap(58, 58, 58)
+                                        .addComponent(lblVidaENum))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblTurnoEBarra)
+                                        .addGap(58, 58, 58)
+                                        .addComponent(lblTurnoENum))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblIcoUser)
+                    .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblArqI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(lblGueI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(lblMagI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(lblHeaI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(lblVidaANum)
+                        .addGap(16, 16, 16)
+                        .addComponent(lblFlechaANum)
+                        .addGap(136, 136, 136)
+                        .addComponent(lblStaminaGNum)
+                        .addGap(156, 156, 156)
+                        .addComponent(lblManaMNum)
+                        .addGap(106, 106, 106)
+                        .addComponent(lblVidaHNum)
+                        .addGap(16, 16, 16)
+                        .addComponent(lblManaHNum))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(360, 360, 360)
+                        .addComponent(lblVidaMNum))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(lblVidaGNum))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(lblEnemigo)
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblenemigoIco, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblVidaEBarra)
+                                    .addComponent(lblVidaENum))
+                                .addGap(16, 16, 16)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblTurnoEBarra)
+                                    .addComponent(lblTurnoENum))))
+                        .addGap(93, 93, 93)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
